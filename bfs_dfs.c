@@ -217,22 +217,19 @@ void dfs(struct graph* Graph, int strt){
 	printf("null");
 }
 
-int main()
-{
-    struct graph* Graph = createGraph(6);
-    addEdge(Graph, 0, 1);
-    addEdge(Graph, 0, 2);
-    addEdge(Graph, 1, 2);
-    addEdge(Graph, 1, 4);
-    addEdge(Graph, 1, 3);
-    addEdge(Graph, 2, 4);
-    addEdge(Graph, 3, 4);
+int main(){
+	struct graph* Graph = createGraph(6);
+	addEdge(Graph, 0, 1);
+	addEdge(Graph, 0, 2);
+	addEdge(Graph, 1, 2);
+	addEdge(Graph, 1, 4);
+	addEdge(Graph, 1, 3);
+	addEdge(Graph, 2, 4);
+	addEdge(Graph, 3, 4);
  
- 	printGraph(Graph);
+	printGraph(Graph);
+	bfs(Graph,0);
+	dfs(Graph,0);
 
- 	bfs(Graph,0);
-
- 	dfs(Graph,0);
- 
 	return 0;
 }
